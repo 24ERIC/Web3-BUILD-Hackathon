@@ -35,9 +35,9 @@ const LogoWrapper = styled.div`
         fill: #89c70d;
         width: 500px; 
         height: 500px; 
-        transition: rotate(1turn);
+        transition: 1s ease-in-out;
         &:hover {
-            transform: rotate(0.5turn);
+            transform: rotate(360deg);
             fill: #b3e253; 
         }
     }

@@ -20,9 +20,9 @@ const Logo = styled.div`
     fill: #89c70d;
     width: 30px; 
     height: 30px; 
-    transition: rotate(1turn);
+    transition: 1s ease-in-out;
     &:hover {
-        transform: rotate(0.5turn);
+        transform: rotate(360deg);
         fill: #b3e253; 
     }
   }
