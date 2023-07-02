@@ -1,4 +1,4 @@
-import { near } from 'near-sdk-core';
+import * as near from 'near-sdk-as';
 
 // Import the Proposal interface from the appropriate location
 import { Proposal } from './interfaces/Proposals';
