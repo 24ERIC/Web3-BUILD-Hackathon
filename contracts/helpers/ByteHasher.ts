@@ -1,13 +1,8 @@
-// SPDX-License-Identifier: MIT
-
-import { utils } from 'near-api-js';
-import { keccak256 } from 'js-sha3';
+import { context, storage, logging, u32 } from 'near-sdk-as';
 
 // Create a keccak256 hash of a bytestring
-function hashToField(value: Uint8Array): string {
-    const hash = utils.serialize.serialize(value);
-    const hashBuffer = Buffer.from(hash);
-    const hashBytes = Buffer.from(keccak256.array(hashBuffer));
-    const result = hashBytes.readUInt32BE(0) >> 8;
+export function hashToField(value: Uint8Array): string {
+    const hashBytes = context.hash(value);
+    const result = u32((hashBytes[0] << 24) | (hashBytes[1] << 16) | (hashBytes[2] << 8) | hashBytes[3]) >> 8;
     return result.toString();
 }

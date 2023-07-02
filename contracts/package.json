@@ -1,9 +1,11 @@
 {
   "dependencies": {
+    "js-sha3": "^0.8.0",
     "near-api-js": "^2.1.4",
     "near-sdk-core": "^3.2.1"
   },
   "devDependencies": {
+    "@types/node": "^20.3.3",
     "near-sdk-as": "^3.2.3"
   }
 }
